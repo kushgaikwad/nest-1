@@ -1,7 +1,7 @@
-export function getPromptforSummary(selctedText: string): string {
-  return 'Give a brief summary for: ' + selctedText;
+export function getPromptforSummary(selectedText: string): string {
+  return 'Give a brief summary for: ' + selectedText;
 }
 
-export function getPromptforTags(selctedText: string): string {
-  return 'What will be the hashtags words associated to: ' + selctedText;
+export function getPromptforTags(selectedText: string): string {
+  return 'What will be the hashtags words associated to: ' + selectedText;
 }
