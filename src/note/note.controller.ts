@@ -12,11 +12,11 @@ export class NoteController {
     return this.noteService.findAll();
   }
 
-  @Post()
-  async createNote(
-    @Body()
-    note: CreateNoteDto,
-  ): Promise<Note> {
-    return this.noteService.create(note);
-  }
+  //   @Post()
+  //   async createNote(
+  //     @Body()
+  //     note: CreateNoteDto,
+  //   ): Promise<Note> {
+  //     return this.noteService.create(note);
+  //   }
 }
