@@ -48,7 +48,6 @@ export class ChatGptAiService {
           },
         ],
         temperature: DEFAULT_TEMPERATURE,
-        // max_tokens: 2048,
       };
 
       this.logger.log(
@@ -67,7 +66,6 @@ export class ChatGptAiService {
       }
 
       const paramsForHashtags: CreateChatCompletionRequest = {
-        // prompt: getPromptforSummary(input.selectedText),
         model: DEFAULT_MODEL_ID,
         messages: [
           {
@@ -76,7 +74,6 @@ export class ChatGptAiService {
           },
         ],
         temperature: DEFAULT_TEMPERATURE,
-        // max_tokens: 2048,
       };
 
       this.logger.log(
