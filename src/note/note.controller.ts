@@ -1,5 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { CreateNoteDto } from './dto/create-note.dto';
+import { Controller, Get } from '@nestjs/common';
 import { NoteService } from './note.service';
 import { Note } from './schemas/note.schema';
 
@@ -10,13 +9,5 @@ export class NoteController {
   @Get()
   async getAllNotes(): Promise<Note[]> {
     return this.noteService.findAll();
-  }
-
-  @Post()
-  async createNote(
-    @Body()
-    note: CreateNoteDto,
-  ): Promise<Note> {
-    return this.noteService.create(note);
   }
 }
