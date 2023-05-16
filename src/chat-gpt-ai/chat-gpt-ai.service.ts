@@ -1,12 +1,9 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
-import {
-  Configuration,
-  OpenAIApi,
-  CreateCompletionRequest,
-  CreateChatCompletionRequest,
-} from 'openai';
-import { getPromptforSummary, getPromptforTags } from 'src/libs/openAI/utils';
-import { NoteService } from 'src/note/note.service';
+import { Configuration, OpenAIApi, CreateChatCompletionRequest } from 'openai';
+
+//import { NoteService } from 'src/note/note.service';
+import { NoteService } from '../note/note.service';
+import { getPromptforSummary, getPromptforTags } from './libs/utils';
 import { GetAiModelAnswer } from './model/get-ai-model-answer';
 
 const DEFAULT_MODEL_ID = 'gpt-3.5-turbo';
