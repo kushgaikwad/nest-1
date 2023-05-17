@@ -1,15 +1,11 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { Configuration, OpenAIApi, CreateChatCompletionRequest } from 'openai';
-
-//import { NoteService } from 'src/note/note.service';
 import { NoteService } from '../note/note.service';
 import { getPromptforSummary, getPromptforTags } from './libs/utils';
 import { GetAiModelAnswer } from './model/get-ai-model-answer';
 
 const DEFAULT_MODEL_ID = 'gpt-3.5-turbo';
-//const DEFAULT_MODEL_ID = 'text-davinci-003';
 const DEFAULT_TEMPERATURE = 0.3;
-//text-davinci-003
 
 @Injectable()
 export class ChatGptAiService {
@@ -36,7 +32,6 @@ export class ChatGptAiService {
 
     try {
       const paramsForSummary: CreateChatCompletionRequest = {
-        // prompt: getPromptforSummary(input.selectedText),
         model: DEFAULT_MODEL_ID,
         messages: [
           {

@@ -23,13 +23,7 @@ describe('NoteController', () => {
     httpServer = app.getHttpServer();
   });
 
-  //   afterAll(async () => {
-  //     //await dbConnection.db.dropDatabase();
-  //     await app.close();
-  //   });
-
   afterEach(async () => {
-    // await dbConnection.collection('notes').deleteMany({});
     await dbConnection.collection('notes').deleteOne(noteStub());
   });
 
