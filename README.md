@@ -13,7 +13,7 @@ $ yarn install
 
 You would need  
 1. mongo DB setup, specifically the connection URI
-2. OpenaI api keys
+2. OpenaI api key. and organization id
 
 Create a .env file in your root folder and add the follwing keys : OPENAI_ORG_ID, OPENAI_API_KEY & DB_URI
 
